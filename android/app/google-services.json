@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "283048124844",
+    "project_id": "reach-me-c4389",
+    "storage_bucket": "reach-me-c4389.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283048124844:android:ef2c48f55ceb40f5f49a09",
+        "android_client_info": {
+          "package_name": "com.example.reachme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283048124844-t1f6eupp06v0h6dslovj8o8hn8oeof18.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJojK5S9wlK01uUV9G7py8rCPx8kfaBTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283048124844-t1f6eupp06v0h6dslovj8o8hn8oeof18.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
