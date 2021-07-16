@@ -1,12 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:reachme/constants/Constantcolors.dart';
 
 class ProfileHelpers with ChangeNotifier {
+  ConstantColors constantColors = ConstantColors();
   Widget headerProfile(BuildContext context, AsyncSnapshot snapshot) {
-    ConstantColors constantColors = ConstantColors();
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.25,
       child: Row(
@@ -136,6 +137,69 @@ class ProfileHelpers with ChangeNotifier {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget divider(BuildContext context) {
+    return Center(
+      child: SizedBox(
+        height: 25,
+        width: 350,
+        child: Divider(
+          color: constantColors.whiteColor,
+        ),
+      ),
+    );
+  }
+
+  Widget middleProfile(BuildContext context, dynamic snapshot) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          margin: EdgeInsets.only(left: 8),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(2),
+          ),
+          child: Row(
+            children: [
+              Icon(FontAwesomeIcons.userAstronaut,
+                  color: constantColors.yellowColor, size: 16),
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                'Recently Added',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: constantColors.whiteColor,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 8),
+          height: MediaQuery.of(context).size.height * 0.1,
+          decoration: BoxDecoration(
+            color: constantColors.darkColor.withOpacity(0.4),
+            borderRadius: BorderRadius.circular(15),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget footerProfile(BuildContext context, dynamic snapshot) {
+    return Container(
+      child: Image.asset('assets/images/empty.png'),
+      margin: EdgeInsets.all(8),
+      height: MediaQuery.of(context).size.height * 0.57,
+      decoration: BoxDecoration(
+        color: constantColors.darkColor.withOpacity(0.4),
+        borderRadius: BorderRadius.circular(5),
       ),
     );
   }

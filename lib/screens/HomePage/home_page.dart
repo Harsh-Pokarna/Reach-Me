@@ -18,8 +18,11 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    Provider.of<FirebaseOperations>(context, listen: false)
-        .initUserData(context);
+    Future.delayed(Duration.zero).then((value) {
+      Provider.of<FirebaseOperations>(context, listen: false)
+          .initUserData(context);
+    });
+    print('data fetching started');
   }
 
   ConstantColors constantColors = ConstantColors();

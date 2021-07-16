@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:reachme/constants/Constantcolors.dart';
+import 'package:reachme/screens/Feed/feed_helpers.dart';
 import 'package:reachme/screens/HomePage/homepage_helpers.dart';
 import 'package:reachme/screens/LandingPage/landing_helpers.dart';
 import 'package:reachme/screens/LandingPage/landing_services.dart';
@@ -10,6 +11,7 @@ import 'package:reachme/screens/Profile/profile_helpers.dart';
 import 'package:reachme/screens/SplashScreen/splash_screen.dart';
 import 'package:reachme/services/Authentication.dart';
 import 'package:reachme/services/firebase_operations.dart';
+import 'package:reachme/utils/upload_post.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,6 +32,8 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => FirebaseOperations()),
         ChangeNotifierProvider(create: (_) => HomepageHelpers()),
         ChangeNotifierProvider(create: (_) => ProfileHelpers()),
+        ChangeNotifierProvider(create: (_) => UploadPost()),
+        ChangeNotifierProvider(create: (_) => FeedHelpers()),
       ],
       child: MaterialApp(
         home: SplashScreen(),

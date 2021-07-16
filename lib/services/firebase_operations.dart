@@ -43,6 +43,7 @@ class FirebaseOperations with ChangeNotifier {
       initUserEmail = doc.data()['useremail'];
       initUserImage = doc.data()['userimage'];
       print('Username is => $initUserName');
+      print('Userimage is => $initUserImage');
       notifyListeners();
     });
   }
