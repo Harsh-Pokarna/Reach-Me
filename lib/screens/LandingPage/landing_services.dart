@@ -146,7 +146,6 @@ class LandingService with ChangeNotifier {
                           .createAccount(
                               emailController.text, passwordController.text)
                           .whenComplete(() {
-                        print('Creating collection');
                         Provider.of<FirebaseOperations>(context, listen: false)
                             .createUserCollection(context, {
                           'useruid': Provider.of<Authentication>(context,
@@ -259,9 +258,7 @@ class LandingService with ChangeNotifier {
       Navigator.of(context).pushReplacement(
         PageTransition(child: HomePage(), type: PageTransitionType.bottomToTop),
       );
-      print('dfa;dfadfa');
     } on FirebaseAuthException catch (error) {
-      print(error);
       showDialog(
           context: context,
           builder: (ctx) {

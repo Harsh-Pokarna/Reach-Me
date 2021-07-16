@@ -22,7 +22,6 @@ class _HomePageState extends State<HomePage> {
       Provider.of<FirebaseOperations>(context, listen: false)
           .initUserData(context);
     });
-    print('data fetching started');
   }
 
   ConstantColors constantColors = ConstantColors();

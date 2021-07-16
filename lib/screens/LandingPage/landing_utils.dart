@@ -21,7 +21,7 @@ class LandingUtils with ChangeNotifier {
     pickedUserAvatar == null
         ? print('Select an image')
         : userAvatar = File(pickedUserAvatar.path);
-    print(userAvatar.path);
+
     userAvatar != null
         ? Provider.of<LandingService>(context, listen: false)
             .showUserAvatar(context)

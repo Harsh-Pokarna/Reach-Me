@@ -9,9 +9,6 @@ class HomepageHelpers with ChangeNotifier {
   ConstantColors constantColors = ConstantColors();
   Widget bottomNavBar(
       int index, PageController pageController, BuildContext context) {
-    print(
-        Provider.of<FirebaseOperations>(context, listen: false).initUserImage ??
-            'It');
     return CustomNavigationBar(
       items: [
         CustomNavigationBarItem(icon: Icon(EvaIcons.home)),
